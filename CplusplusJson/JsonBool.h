@@ -14,6 +14,33 @@
 #ifndef JSONBOOL_H__
 #define JSONBOOL_H__
 
+#include "JsonBaseData.h"
+
+namespace json {
+	// class JsonBool
+	class JsonBool : public JsonBaseData {
+	public:
+		JsonBool() : m_bData(false) { }
+		JsonBool(bool data) : m_bData(data) { }
+
+		virtual ~JsonBool() { }
+
+		virtual string toString() {
+			if (m_bData) {
+				return "true";
+			}
+			else {
+				return "false";
+			}
+		}
+
+	private:
+		bool m_bData;
+	};
+}
+
+
+
 #endif  //JSONBOOL_H__
 
 

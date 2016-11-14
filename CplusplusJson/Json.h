@@ -2,7 +2,7 @@
 // Project Name        :    CplusplusJson
 // Project Description :    
 // ===============================================================================
-// Filename Name       :    json.h
+// Filename Name       :    Json.h
 // Class Version       :    v1.0.0.0
 // Class Description   :    
 // Author              :    Tutuxs
@@ -22,7 +22,21 @@ using std::vector;
 using std::string;
 
 namespace json {
+	// class Json
+	class Json {
+	public:
+		Json();
+		Json(JsonDataPtr data);
+		~Json();
 
+		void parse(const string& jsonStr);
+		string toString();
+		Value root();
+		void setRoot(const Value& root);
+
+	private:
+		JsonDataPtr m_pRoot;
+	};
 }
 
 

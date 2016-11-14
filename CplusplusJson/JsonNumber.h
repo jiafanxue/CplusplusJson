@@ -14,6 +14,26 @@
 #ifndef JSONNUMBER_H__
 #define JSONNUMBER_H__
 
+#include "JsonBaseData.h"
+
+namespace json {
+	// class JsonNumber
+	class JsonNumber : public JsonBaseData {
+	public:
+		JsonNumber() : m_iData(0) { }
+		JsonNumber(int data) : m_iData(data) { }
+
+		virtual ~JsonNumber() { }
+
+		virtual string toString() {
+			return intToString(m_iData);
+		}
+
+	private:
+		int m_iData;
+	};
+}
+
 #endif  //JSONNUMBER_H__
 
 

@@ -78,16 +78,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Json.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Json.h" />
     <ClInclude Include="JsonArray.h" />
+    <ClInclude Include="JsonBaseData.h" />
     <ClInclude Include="JsonBool.h" />
+    <ClInclude Include="JsonComment.h" />
     <ClInclude Include="JsonNumber.h" />
     <ClInclude Include="JsonObject.h" />
     <ClInclude Include="JsonString.h" />
     <ClInclude Include="JsonValue.h" />
+    <ClInclude Include="utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -32,7 +32,27 @@ int main()
 
 void test_parse()
 {
-	// empty
+	Json json;
+	Value arrayValue = makeArrayValue();
+	Value stringValue1 = makeStringValue("name1");
+	Value stringValue2 = makeStringValue("name2");
+
+	Value objectValue = makeObjectValue();
+	Value numValue = makeNumberValue(2345);
+	Value boolValue = makeBoolValue(false);
+	Value stringValue3 = makeStringValue("value3");
+	objectValue.addValue("num", numValue);
+	objectValue.addValue("bool", boolValue);
+	objectValue.addValue("name3", stringValue3);
+
+	arrayValue.addValue(stringValue1);
+	arrayValue.addValue(stringValue2);
+	arrayValue.addValue(objectValue);
+	json.setRoot(arrayValue);
+
+	cout << json.toString() << endl;
+
+
 }
 
 
